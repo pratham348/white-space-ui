@@ -13,7 +13,7 @@ const FifthContainer = () => {
       </div>
      </Row>
      <Row className="align-items-center">
-      <Col>
+      <Col lg={4} sm={12} xs={12}>
        <Card className="free">
         <CardBody>
          <h4>Free</h4>
@@ -31,7 +31,7 @@ const FifthContainer = () => {
         </CardBody>
        </Card>
       </Col>
-      <Col>
+      <Col lg={4} sm={12} xs={12}>
        <Card className="personal">
         <CardBody>
          <h4>Personal</h4>
@@ -49,7 +49,7 @@ const FifthContainer = () => {
         </CardBody>
        </Card>
       </Col>
-      <Col>
+      <Col lg={4} sm={12} xs={12}>
        <Card className="free">
         <CardBody>
          <h4>Organization</h4>

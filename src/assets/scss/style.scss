@@ -8,7 +8,7 @@ $secondary: #4f9cf9;
 $white: #ffffff;
 $yellow: #ffe492;
 $black: #212529;
-
+$lightBlue:#A7CEFC;
 //Fonts
 $font-dm-sans: "DM Sans", sans-serif;
 $font-intern: "Inter", sans-serif;
@@ -17,6 +17,7 @@ body {
  font-family: $font-dm-sans !important;
 }
 .primary-btn {
+    font-family: $font-dm-sans !important;
  background-color: $secondary !important;
  border-radius: 8px !important;
  border: 1px solid $secondary !important;
@@ -26,6 +27,7 @@ body {
  }
 }
 .secondary-btn {
+    font-family: $font-dm-sans !important;
  color: $black !important;
  background-color: $white !important;
  border-radius: 8px !important;

@@ -1,12 +1,13 @@
 import ImageBox from "../../assets/images/Image-container.png"
-import { Button } from "reactstrap"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Button, Col, Row } from "reactstrap"
 import { ArrowRight } from "react-feather"
 
 const MainContainer = () => {
  return (
   <div className="main-container">
    <div className="container d-flex align-items-center">
+   <Row>
+   <Col lg={6} sm={12} xs={12}>
     <div className="text-box">
      <div className="main-text">Get More Done with whitepace</div>
      <div className="second-text">
@@ -19,9 +20,13 @@ const MainContainer = () => {
       <ArrowRight />
      </Button>
     </div>
+    </Col>
+    <Col lg={6} sm={12} xs={12}>
     <div className="image-box">
      <img src={ImageBox} alt="Imagebox" className="img-fluid" />
     </div>
+    </Col>
+    </Row>
    </div>
   </div>
  )

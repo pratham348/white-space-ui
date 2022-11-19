@@ -15,7 +15,7 @@ import Footer from "./Footer"
 
 const Index = () => {
  return (
-  <div>
+  <>
    <Header />
    <MainContainer />
    <SecondContainer />
@@ -28,7 +28,7 @@ const Index = () => {
    <NinthContainer />
    <TenthContainer />
    <Footer />
-  </div>
+  </>
  )
 }
 

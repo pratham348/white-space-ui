@@ -2,6 +2,7 @@ import React from "react"
 import { Button } from "reactstrap"
 import "./home.scss"
 import logo from "../../assets/images/Logo.svg"
+import { ArrowRight } from "react-feather"
 const Header = () => {
  return (
   <div className="header">
@@ -16,8 +17,8 @@ const Header = () => {
       <li>Resources</li>
       <li>Pricing</li>
      </ul>
-     <Button className="login">login</Button>
-     <Button className="try">Try Free</Button>
+     <Button className="login secondary-btn">login</Button>
+     <Button className="primary-btn">Try Whitepace free <ArrowRight/></Button>
     </div>
    </div>
   </div>

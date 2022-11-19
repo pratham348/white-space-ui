@@ -1,598 +1,742 @@
 @import "../../assets/scss/style.scss";
 
 .header {
- padding: 20px;
- background-color: $primary;
- display: flex;
- flex-direction: row;
+  padding: 20px;
+  background-color: $primary;
+  display: flex;
+  flex-direction: row;
 
- img {
-  width: 191px;
-  height: 34px;
- }
-
- .menu-section {
-  color: $white;
-
-  ul {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   margin-bottom: 0;
-   list-style: none;
-
-   li {
-    margin-right: 32px;
-   }
+  img {
+    width: 191px;
+    height: 34px;
   }
 
-  .login {
-   background-color: $yellow;
-   margin-right: 24px;
-   border-radius: 8px;
-   color: $primary;
-   border: 1px solid $yellow;
-  }
+  .menu-section {
+    color: $white;
 
-  .try {
-   background-color: $secondary;
-   border-radius: 8px;
-   border: 1px solid $secondary;
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 0;
+      list-style: none;
+
+      li {
+        margin-right: 32px;
+      }
+    }
+
+    .login {
+      background-color: $yellow;
+      margin-right: 24px;
+      //    border-radius: 8px;
+      //    color: $primary;
+      //    border: 1px solid $yellow;
+    }
+
+    .try {
+      //    background-color: $secondary;
+      //    border-radius: 8px;
+      //    border: 1px solid $secondary;
+    }
   }
- }
 }
 //main Container
 
 .main-container {
- background-color: $primary;
- background-image: url("../../assets/images/Element.svg");
- background-repeat: no-repeat;
- background-position: center;
- background-size: cover;
- height: 829px;
- display: flex;
- align-items: center;
-
- .image-box {
-  float: right;
-  img {
-   width: 824px;
-   height: 549px;
+  background-color: $primary;
+  background-image: url("../../assets/images/Element.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  //   background-size: cover;
+  //   height: 829px;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  @include md {
+    padding: 200px 0 0 0;
+    text-align: center;
   }
- }
-
- .text-box {
-  color: $white;
-  font-family: $font-intern;
-  font-style: normal;
-  float: left;
-
-  .main-text {
-   @include main-text-square;
+  .image-box {
+    float: right;
+    @include md {
+      padding: 100px 108px;
+    }
+    img {
+      width: 824px;
+      height: 549px;
+      @include md {
+        width: 551px;
+        height: 367px;
+      }
+    }
   }
 
-  .second-text {
-   @include second-text-square;
-   margin-top: 24px;
-   margin-bottom: 60px;
+  .text-box {
+    color: $white;
+    font-family: $font-intern;
+    font-style: normal;
+    float: left;
+    @include md {
+      padding: 0 20px;
+    }
+    .main-text {
+      @include main-text-square;
+    }
+
+    .second-text {
+      @include second-text-square;
+      margin-top: 24px;
+      margin-bottom: 60px;
+    }
   }
- }
 }
 //Second Container
 .second-container {
- .project-management {
-  margin: 100px 0;
-  //   margin-top: 140px;
-  //   margin-bottom: 100px;
-  //   margin-left: 60px;
-  //   height: 547px;
-  .text-box {
-   margin-left: 60px;
-   .main-text {
-    @include main-text-square;
-    background-image: url("../../assets/images/ProjectElement.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-   }
-
-   .second-text {
-    @include second-text-square;
-    margin-top: 24px;
-    margin-bottom: 60px;
-   }
-   .image-box {
-    img {
-     width: 748px;
-     height: 547px;
+  .project-management {
+    padding: 100px 0;
+    //   margin-top: 140px;
+    //   margin-bottom: 100px;
+    //   margin-left: 60px;
+    //   height: 547px;
+    @include xl {
+      padding: 100px 0;
     }
-   }
-  }
- }
- .work-together {
-  margin-bottom: 140px;
-  //   height: 547px;
-  .image-box {
-   margin-right: 60px;
-  }
-  .text-box {
-   .main-text {
-    @include main-text-square;
-    background-image: url("../../assets/images/WorkElement.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-   }
-
-   .second-text {
-    margin-right: 60px;
-    @include second-text-square;
-    margin-top: 24px;
-    margin-bottom: 60px;
-   }
-   .image-box {
-    img {
-     width: 710px;
-     height: 661px;
+    @include md{
+      text-align: center;
     }
-   }
+    .text-box {
+      margin-left: 60px;
+      @include md{
+        padding: 100px 20px 60px 20px;
+      }
+      .main-text {
+        @include main-text-square;
+        background-image: url("../../assets/images/ProjectElement.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+      }
+
+      .second-text {
+        @include second-text-square;
+        margin-top: 24px;
+        margin-bottom: 60px;
+      }
+      
+    }
+    .image-box {
+      @include md{
+        padding: 0 90px;
+      }
+      img {
+        width: 748px;
+        height: 547px;
+      }
+    }
   }
- }
+  .work-together {
+    margin-bottom: 140px;
+    //   height: 547px;
+    .image-box {
+      margin-right: 60px;
+    }
+    @include md{
+      text-align: center;
+    }
+    .text-box {
+      @include md{
+        padding: 100px 20px 60px 20px;
+      }
+      .main-text {
+        @include main-text-square;
+        background-image: url("../../assets/images/WorkElement.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+      }
+
+      .second-text {
+        margin-right: 60px;
+        @include second-text-square;
+        margin-top: 24px;
+        margin-bottom: 60px;
+      }
+    }
+    .image-box {
+      @include md{
+        padding: 0 80px;
+      }
+      img {
+        width: 710px;
+        height: 661px;
+      }
+    }
+  }
 }
 //third Container
 .third-container {
- background-color: $primary;
- padding: 100px 0;
- //  .extension {
- color: $white;
- //   margin-left: 60px;
- //  height: 300px;
- .text-box {
-  margin-left: 60px;
-  .main-text {
-   @include main-text-square;
-   background-image: url("../../assets/images/ProjectElement.png");
-   background-repeat: no-repeat;
-   background-position: bottom;
+  background-color: $primary;
+  padding: 100px 0;
+  //  .extension {
+  color: $white;
+  //   margin-left: 60px;
+  //  height: 300px;
+  @include md{
+    text-align: center;
   }
+  .text-box {
+    @include md{
+      padding: 100px 32px 60px 32px;
+    }
+    margin-left: 60px;
+    .main-text {
+      @include main-text-square;
+      background-image: url("../../assets/images/ProjectElement.png");
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
 
-  .second-text {
-   @include second-text-square;
-   margin-top: 24px;
-   margin-bottom: 60px;
+    .second-text {
+      @include second-text-square;
+      margin-top: 24px;
+      margin-bottom: 60px;
+    }
   }
   .image-box {
-   img {
-    width: 748px;
-    height: 547px;
-   }
+    @include md{
+      padding: 0 80px;
+    }
+    img {
+      width: 748px;
+      height: 547px;
+    }
+    //   }
   }
-  //   }
- }
 }
 //forth-container
 .forth-container {
- padding: 100px 0;
-
- .customize {
-  //   height: 547px;
-
-  .text-box {
-   margin-left: 98px;
-
-   .main-text {
-    @include main-text-square;
-    background-image: url("../../assets/images/WorkElement.png");
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    line-height: 70px;
-   }
-
-   .second-text {
-    // margin-right: 60px;
-    @include second-text-square;
-    margin-top: 20px;
-    margin-bottom: 20px;
-   }
-   .custom {
-    padding: 20px 40px;
-   }
+  padding: 100px 0;
+  @include md{
+    text-align: center;
   }
- }
+  .customize {
+    //   height: 547px;
+
+    .text-box {
+      margin-left: 98px;
+      @include md{
+        margin-left:0;
+        padding: 60px 20px 100px 20px;
+      }
+      .main-text {
+        @include main-text-square;
+        background-image: url("../../assets/images/WorkElement.png");
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        line-height: 70px;
+      }
+
+      .second-text {
+        // margin-right: 60px;
+        @include second-text-square;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .custom {
+        padding: 20px 40px;
+      }
+    }
+    .image-box {
+      @include md{
+        padding: 0 80px;
+      }
+      img {
+        width: 748px;
+        height: 547px;
+      }
+      //   }
+    }
+  }
 }
 //fifth-container
 .fifth-container {
- .plan {
-  padding: 140px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .big-text {
-   text-align: center;
-   font-family: $font-intern;
-   font-style: normal;
-   font-weight: 700;
-   font-size: 72px;
-   margin-bottom: 24px;
-   background-image: url("../../assets/images/WorkElement.png");
-   background-repeat: no-repeat;
-   background-position: bottom;
-  }
-  .small-text {
-   text-align: center;
-   font-family: $font-intern;
-   font-style: normal;
-   font-weight: 400;
-   font-size: 18px;
-   line-height: 30px;
-   margin-bottom: 60px;
-  }
-  h4 {
-   font-style: normal;
-   font-weight: 600;
-   font-size: 24px;
-   line-height: 36px;
-  }
-  h3 {
-   font-style: normal;
-   font-weight: 700;
-   font-size: 36px;
-   line-height: 44px;
-  }
-  p {
-   font-style: normal;
-   font-weight: 500;
-   font-size: 18px;
-   line-height: 23px;
-  }
-  ul {
-   li {
-    list-style-image: url("../../assets/Icons/Icon.png");
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 28px;
-   }
-  }
-  .free {
-   background: $white;
-   border: 1px solid #ffe492;
-   border-radius: 10px;
-   font-family: $font-intern;
-   &:hover {
-    background: $primary;
-    border: 1px solid $primary;
-    color: $white;
-    ul {
-     li {
-      list-style-image: url("../../assets/Icons/Icon2.png");
-     }
+  .plan {
+    padding: 100px;
+    @include xl {
+      padding: 140px 0;
     }
-    button {
-     @include primary-btn;
-    }
-   }
-   .card-body {
-    padding: 40px 44px;
-   }
-  }
-  .personal {
-   background: #043873;
-   box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.08);
-   border-radius: 10px;
-   color: $white;
-   &:hover {
-    background: $white;
-    border: 1px solid $yellow;
-    color: $black;
-    ul {
-     li {
-      list-style-image: url("../../assets/Icons/Icon.png");
-     }
-    }
-    button {
-     @include secondary-btn;
-    }
-   }
-   .card-body {
-    padding: 80px 44px;
-    ul {
-     li {
-      list-style-image: url("../../assets/Icons/Icon2.png");
-     }
-    }
-   }
-  }
- }
-}
-//sixth-container
-.sixth-container {
- background-color: $primary;
- padding: 140px;
- display: flex;
- flex-direction: row;
- font-family: $font-intern;
- text-align: center;
- color: $white;
- font-style: normal;
- background-image: url("../../assets/images/Group.png");
- background-repeat: no-repeat;
- background-position: left;
-
- .main-text {
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 87px;
-  letter-spacing: -0.02em;
-  margin-bottom: 24px;
-  background-image: url("../../assets/images/ElementBlue.png");
-  background-repeat: no-repeat;
-  background-position: bottom right;
- }
- .second-text {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  margin-bottom: 60px;
- }
-}
-//seventh-container
-.seventh-container {
- display: flex;
- flex-direction: row;
-
- font-family: $font-intern;
- font-style: normal;
- .data {
-  padding: 140px;
-  display: flex;
-  flex-direction: row;
-  .text-box {
-   .second-text {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    margin-bottom: 60px;
-   }
-  }
-  .image-box {
-   img {
-    width: 1807px;
-   }
-  }
- }
- .main-text {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 87px;
-  letter-spacing: -0.02em;
-  background-image: url("../../assets/images/WorkElement.png");
-  background-repeat: no-repeat;
-  background-position: bottom;
- }
- .client {
-  padding: 140px;
-  display: flex;
-  flex-direction: column;
-  .main-text {
-   text-align: center;
-  }
-  .client-list {
-   margin-top: 100px;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-  }
- }
-}
-//eighth-container
-.eighth-container {
- padding: 140px;
-
- background-color: $primary;
- font-family: $font-intern;
- font-style: normal;
- background-image: url("../../assets/images/Element1.png");
- background-repeat: no-repeat;
- color: $white;
- .data {
-  display: flex;
-  flex-direction: row;
-  .image-box {
-   img {
-    width: 900px;
-   }
-  }
-  .text-box {
-   margin-left: 50px;
-   .main-text {
-    font-weight: 700;
-    font-size: 67px;
-    line-height: 77px;
-    letter-spacing: -0.02em;
-   }
-   .second-text {
-    margin-top: 20px;
-    margin-bottom: 60px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    /* or 167% */
-
-    letter-spacing: -0.02em;
-   }
-  }
- }
-}
-.ninth-container {
- padding: 140px;
- font-family: $font-intern;
- font-style: normal;
- .clients {
-  display: flex;
-  flex-direction: column;
-  .text-box {
-   margin-bottom: 60px;
-   .main-text {
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 84px;
-    background-image: url("../../assets/images/WorkElement.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    text-align: center;
-   }
-  }
-  .card-box {
-   .card {
-    padding: 60px 40px;
-    &:hover {
-     background-color: $secondary;
-     color: $white;
-     .card-body {
-      background-image: url("../../assets/images/QuoteLight.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .big-text {
+      text-align: center;
+      font-family: $font-intern;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 72px;
+      margin-bottom: 24px;
+      background-image: url("../../assets/images/WorkElement.png");
       background-repeat: no-repeat;
-      background-position: top left;
-      h3 {
-       color: $black;
-      }
-     }
+      background-position: bottom;
     }
-    .card-body {
-     background-image: url("../../assets/images/QuoteDark.svg");
-     background-repeat: no-repeat;
-     background-position: top left;
-
-     p {
-      text-align: left;
-      margin-top: 65px;
+    .small-text {
+      text-align: center;
+      font-family: $font-intern;
+      font-style: normal;
       font-weight: 400;
       font-size: 18px;
       line-height: 30px;
-      letter-spacing: -0.02em;
-     }
-     .client-detail {
-      display: flex;
-      flex-direction: row;
-      img {
-       width: 95px;
-       height: 95px;
-      }
-      .text-date {
-       display: flex;
-       flex-direction: column;
-       margin-left: 20px;
-       h3 {
-        font-weight: 600;
-        font-size: 19px;
-        line-height: 32px;
-       }
-       p {
-        margin: 0;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 20px;
-       }
-      }
-     }
+      margin-bottom: 60px;
     }
-   }
+    h4 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+    }
+    h3 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+    }
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23px;
+    }
+    ul {
+      li {
+        list-style-image: url("../../assets/Icons/Icon.png");
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 28px;
+      }
+    }
+    .free {
+      background: $white;
+      border: 1px solid #ffe492;
+      border-radius: 10px;
+      font-family: $font-intern;
+      &:hover {
+        background: $primary;
+        border: 1px solid $primary;
+        color: $white;
+        ul {
+          li {
+            list-style-image: url("../../assets/Icons/Icon2.png");
+          }
+        }
+        button {
+          @include primary-btn;
+        }
+      }
+      .card-body {
+        padding: 40px 44px;
+      }
+    }
+    .personal {
+      background: #043873;
+      box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      color: $white;
+      &:hover {
+        background: $white;
+        border: 1px solid $yellow;
+        color: $black;
+        ul {
+          li {
+            list-style-image: url("../../assets/Icons/Icon.png");
+          }
+        }
+        button {
+          @include secondary-btn;
+        }
+      }
+      .card-body {
+        padding: 80px 44px;
+        ul {
+          li {
+            list-style-image: url("../../assets/Icons/Icon2.png");
+          }
+        }
+      }
+    }
   }
- }
 }
-//tenth-containe
-.tenth-container {
- padding: 140px;
- background-color: $primary;
- color: $white;
- .main-data {
-  text-align: center;
-  font-family: $font-intern;
-  font-style: normal;
-  h1 {
-   font-weight: 700;
-   font-size: 72px;
-   line-height: 87px;
+//sixth-container
+.sixth-container {
+  @include md{
+    text-align: left;
+    padding-left: 0;
   }
-  h3 {
-   margin: 40px 0;
-   font-weight: 400;
-   font-size: 24px;
-   line-height: 32px;
-  }
-  .image-list {
-   img {
-    margin: 0 20px;
-   }
-  }
- }
-}
-//footer
-.footer {
- padding: 140px 140px 40px 140px;
- background-color: $primary;
- color: $white;
- font-family: $font-intern;
- font-style: normal;
- .footer-list {
+  background-color: $primary;
+  padding: 140px;
   display: flex;
   flex-direction: row;
-  gap: 100px;
-  margin-bottom: 100px;
-  .company-details {
-   p {
+  font-family: $font-intern;
+  text-align: center;
+  color: $white;
+  font-style: normal;
+  background-image: url("../../assets/images/Group.png");
+  background-repeat: no-repeat;
+  background-position: left;
+
+  .main-text {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 87px;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    background-image: url("../../assets/images/ElementBlue.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+  .second-text {
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
-    letter-spacing: -0.02em;
-   }
+    margin-bottom: 60px;
   }
-  .service-list {
-   display: flex;
-   flex-direction: row;
-   ul {
-    list-style: none;
-
-    li {
-     align-items: flex-start;
-     //  margin: 15px 32px;
-     margin-bottom: 15px;
-     margin-right: 32px;
+}
+//seventh-container
+.seventh-container {
+  @include md{
+    text-align: center;
+  }
+  display: flex;
+  flex-direction: row;
+  // padding: 10px;
+  font-family: $font-intern;
+  font-style: normal;
+  .data {
+    padding: 140px;
+    @include xl {
+      padding: 140px 0;
     }
-   }
-   .last-child {
-    margin-right: 50px;
-   }
-  }
-  .try-now {
-   h1 {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 36px;
-   }
-   p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-   }
-  }
- }
- .footer-bottom {
-  margin-right: 0px;
-  .left {
-   ul {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-bottom: 0;
-    list-style: none;
-
-    li {
-     margin-right: 32px;
-
-     &:nth-child(6) {
-      margin-left: 475px;
-     }
+    .text-box {
+      @include md{
+        padding: 60px 20px 100px 20px;
+      }
+      .second-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 60px;
+      }
     }
-   }
+    .image-box {
+      img {
+        width: 1807px;
+      }
+    }
   }
- }
+  .main-text {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 87px;
+    letter-spacing: -0.02em;
+    background-image: url("../../assets/images/WorkElement.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  .client {
+    //   padding: 140px;
+    margin-bottom: 140px;
+    display: flex;
+    flex-direction: column;
+    @include md{
+      margin-bottom: 0;
+     }
+    .main-text {
+      text-align: center;
+    }
+    .client-list {
+      @include md{
+       justify-content: center;
+      }
+      margin-top: 100px;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      img {
+        @include md{
+          margin-bottom: 100px;
+         }
+        @include xl {
+          width: 146px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+//eighth-container
+.eighth-container {
+  padding: 140px;
+  @include md{
+    padding: 140px 0;
+    text-align: center;
+   }
+  background-color: $primary;
+  font-family: $font-intern;
+  font-style: normal;
+  background-image: url("../../assets/images/Element1.png");
+  background-repeat: no-repeat;
+  color: $white;
+  .data {
+    display: flex;
+    flex-direction: row;
+    .image-box {
+      
+      img {
+        width: 900px;
+        @include md{
+          width: 485px;
+  height: 392.33px;
+  
+         }
+      }
+    }
+    .text-box {
+      margin-left: 50px;
+      .main-text {
+        font-weight: 700;
+        font-size: 67px;
+        line-height: 77px;
+        letter-spacing: -0.02em;
+        @include md{
+          font-size: 57px;
+        }
+      }
+      .second-text {
+        margin-top: 20px;
+        margin-bottom: 60px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        /* or 167% */
+
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+}
+.ninth-container {
+  padding: 140px;
+  @include xl {
+    padding: 140px 0;
+  }
+  
+  font-family: $font-intern;
+  font-style: normal;
+  .clients {
+    display: flex;
+    flex-direction: column;
+    .text-box {
+      margin-bottom: 60px;
+      .main-text {
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 84px;
+        background-image: url("../../assets/images/WorkElement.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        text-align: center;
+      }
+    }
+    .card-box {
+      .card {
+        padding: 60px 40px;
+        @include xl {
+          padding: 30px 30px;
+        }
+        &:hover {
+          background-color: $secondary;
+          color: $white;
+          .card-body {
+            background-image: url("../../assets/images/QuoteLight.png");
+            background-repeat: no-repeat;
+            background-position: top left;
+            h3 {
+              color: $black;
+            }
+          }
+        }
+        .card-body {
+          background-image: url("../../assets/images/QuoteDark.svg");
+          background-repeat: no-repeat;
+          background-position: top left;
+
+          p {
+            text-align: left;
+            margin-top: 65px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: -0.02em;
+            @include xl {
+              font-size: 16px;
+            }
+          }
+          .client-detail {
+            display: flex;
+            flex-direction: row;
+            img {
+              width: 95px;
+              height: 95px;
+              @include xl {
+                width: 50px;
+                height: 50px;
+              }
+            }
+            .text-date {
+              display: flex;
+              flex-direction: column;
+              margin-left: 20px;
+              h3 {
+                font-weight: 600;
+                font-size: 19px;
+                line-height: 32px;
+                @include xl {
+                  font-size: 13px;
+                }
+              }
+              p {
+                margin: 0;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 20px;
+                @include xl {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//tenth-containe
+.tenth-container {
+  padding: 140px;
+  @include xl {
+    padding: 140px 0;
+  }
+  @include md{
+    text-align: left;
+    padding-left: 0;
+  }
+  background-color: $primary;
+  color: $white;
+  .main-data {
+    text-align: center;
+    font-family: $font-intern;
+    font-style: normal;
+    h1 {
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 87px;
+    }
+    h3 {
+      margin: 40px 0;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 32px;
+    }
+    .image-list {
+      img {
+        margin: 0 20px;
+      }
+    }
+  }
+}
+//footer
+.footer {
+  //   padding: 0;
+  background-color: $primary;
+  color: $white;
+  font-family: $font-intern;
+  font-style: normal;
+  .footer-list {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin-bottom: 100px;
+    .company-details {
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: -0.02em;
+      }
+    }
+    .service-list {
+      display: flex;
+      flex-direction: row;
+      ul {
+        list-style: none;
+
+        li {
+          align-items: flex-start;
+          //  margin: 15px 32px;
+          margin-bottom: 15px;
+          margin-right: 32px;
+          @include xl {
+            margin: 0;
+          }
+          &:hover {
+            color: $yellow;
+          }
+          &:nth-child(1) {
+            font-weight: 700;
+            font-size: 18px;
+          }
+        }
+      }
+      .last-child {
+        margin-right: 50px;
+        @include xl {
+          margin: 0;
+        }
+      }
+    }
+    .try-now {
+      h1 {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+  .footer-bottom {
+    margin-right: 0px;
+    .left {
+      ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+        list-style: none;
+
+        li {
+          margin-right: 32px;
+
+          &:nth-child(6) {
+            margin-left: 475px;
+          }
+        }
+      }
+    }
+  }
 }
