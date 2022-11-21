@@ -1,6 +1,4 @@
-import React from "react"
 import { ArrowRight } from "react-feather"
-import { Button } from "reactstrap"
 
 const SixthContainer = () => {
  return (
@@ -13,10 +11,10 @@ const SixthContainer = () => {
      available on Windows, macOS, Linux, Android and iOS. A terminal app is also
      available!
     </div>
-    <Button className="primary-btn">
+    <button className="primary-btn">
      Try Taskey
      <ArrowRight />
-    </Button>
+    </button>
    </div>
   </div>
  )
