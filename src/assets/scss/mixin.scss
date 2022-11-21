@@ -1,40 +1,3 @@
-@mixin main-text-square {
- font-weight: 700;
- font-size: 64px;
- line-height: 77px;
- letter-spacing: -0.02em;
-}
-@mixin second-text-square {
- font-weight: 400;
- font-size: 18px;
- line-height: 30px;
- letter-spacing: -0.02em;
-}
-@mixin image-square {
- img {
-  width: 824px;
-  height: 549px;
- }
-}
-@mixin primary-btn {
- background-color: $secondary !important;
- border-radius: 8px !important;
- border: 1px solid $secondary !important;
- padding: 18px 40px !important;
- &:hover {
-  background-color: $yellow !important;
- }
-}
-@mixin secondary-btn {
- color: $black !important;
- background-color: $white !important;
- border-radius: 8px !important;
- border: 1px solid $yellow !important;
- padding: 18px 40px !important;
- &:hover {
-  background-color: $secondary !important;
- }
-}
 // responsive class
 // Small tablets and large smartphones (landscape view)
 
@@ -80,5 +43,46 @@ $screen-xll-max: 1399px;
 @mixin xll {
  @media (max-width: #{$screen-xll-max}) {
   @content;
+ }
+}
+
+@mixin main-text-square {
+ font-weight: 700;
+ font-size: 64px;
+ line-height: 77px;
+ letter-spacing: -0.02em;
+ @include sm {
+  font-size: 45px;
+ }
+}
+@mixin second-text-square {
+ font-weight: 400;
+ font-size: 18px;
+ line-height: 30px;
+ letter-spacing: -0.02em;
+}
+@mixin image-square {
+ img {
+  width: 824px;
+  height: 549px;
+ }
+}
+@mixin primary-btn {
+ background-color: $secondary !important;
+ border-radius: 8px !important;
+ border: 1px solid $secondary !important;
+ padding: 18px 40px !important;
+ &:hover {
+  background-color: $yellow !important;
+ }
+}
+@mixin secondary-btn {
+ color: $black !important;
+ background-color: $white !important;
+ border-radius: 8px !important;
+ border: 1px solid $yellow !important;
+ padding: 18px 40px !important;
+ &:hover {
+  background-color: $secondary !important;
  }
 }
